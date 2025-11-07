@@ -1,14 +1,23 @@
 <!doctype html>
 <html lang="en">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sreeraj S — Aspiring Data Science & Machine Learning Enthusiast</title>
   <meta name="description" content="Sreeraj S | Aspiring Data Science & Machine Learning Enthusiast. Projects: ML, EDA, Dashboards.">
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Main CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -21,17 +30,19 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-       <a class="social" href="https://github.com/sreeraj-10" target="_blank" aria-label="GitHub">
-    <i class="fab fa-github"></i>
-</a>
+        <a class="social" href="https://github.com/sreeraj-10" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
         <a class="social" href="https://www.linkedin.com/in/sreeraj10" target="_blank" aria-label="LinkedIn">
-    <i class="fab fa-linkedin"></i>
-</a>
+          <i class="fab fa-linkedin"></i>
+        </a>
       </nav>
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
+
     <!-- HERO -->
     <section id="hero" class="hero card reveal">
       <div class="hero-left">
@@ -41,7 +52,8 @@
           <a class="cta" href="#projects">See Projects</a>
         </p>
       </div>
-      
+    </section>
+
     <!-- ABOUT -->
     <section id="about" class="card reveal">
       <h2>About</h2>
@@ -49,30 +61,27 @@
     </section>
 
     <!-- SKILLS -->
-<section id="skills" class="card reveal">
-  <h2>Skills</h2>
+    <section id="skills" class="card reveal">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill"><i class="fab fa-python"></i> Python</div>
+        <div class="skill"><i class="fas fa-robot"></i> Machine Learning</div>
+        <div class="skill"><i class="fas fa-chart-line"></i> Data Analysis</div>
+        <div class="skill"><i class="fas fa-database"></i> SQL</div>
+        <div class="skill"><i class="fas fa-chart-bar"></i> Power BI</div>
+        <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
+      </div>
 
-  <!-- Skills Grid with Icons -->
-  <div class="skills-grid">
-    <div class="skill"><i class="fab fa-python"></i> Python</div>
-    <div class="skill"><i class="fas fa-robot"></i> Machine Learning</div>
-    <div class="skill"><i class="fas fa-chart-line"></i> Data Analysis</div>
-    <div class="skill"><i class="fas fa-database"></i> SQL</div>
-    <div class="skill"><i class="fas fa-chart-bar"></i> Power BI</div>
-    <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
-  </div>
-
-  <h3 class="mt">Tools & Tech</h3>
-  <div class="tools-icons">
-    <span><i class="fas fa-book-open"></i> Jupyter</span>
-    <span><i class="fas fa-table"></i> Pandas</span>
-    <span><i class="fas fa-superscript"></i> NumPy</span>
-    <span><i class="fas fa-cogs"></i> scikit-learn</span>
-    <span><i class="fas fa-chart-bar"></i> Matplotlib</span>
-    <span><i class="fab fa-git-alt"></i> Git & GitHub</span>
-  </div>
-</section>
-
+      <h3 class="mt">Tools & Tech</h3>
+      <div class="tools-icons">
+        <span><i class="fas fa-book-open"></i> Jupyter</span>
+        <span><i class="fas fa-table"></i> Pandas</span>
+        <span><i class="fas fa-superscript"></i> NumPy</span>
+        <span><i class="fas fa-cogs"></i> scikit-learn</span>
+        <span><i class="fas fa-chart-bar"></i> Matplotlib</span>
+        <span><i class="fab fa-git-alt"></i> Git & GitHub</span>
+      </div>
+    </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="card reveal">
@@ -123,6 +132,7 @@
     <footer class="footer">
       <p>Made with ⚡ • <strong>Sreeraj S</strong></p>
     </footer>
+
   </main>
 
   <!-- MODAL -->
@@ -158,39 +168,17 @@
       entries.forEach(entry=>{
         if(entry.isIntersecting){
           entry.target.classList.add('visible');
-          // once visible, unobserve for performance
           obs.unobserve(entry.target);
         }
       });
     }, {threshold: 0.12});
     reveals.forEach(r=>obs.observe(r));
 
-    // Project modal content (same sample projects)
+    // Project modal content
     const projects = {
-      p1: {
-        title: 'Credit Card Default Prediction',
-        sub: 'ML · Python · scikit-learn',
-        problem: 'Predict customer default risk using transactional and demographic features.',
-        approach: 'Data cleaning, feature engineering, baseline models and cross-validation. Tuned tree-based hyperparameters.',
-        results: 'Balanced performance with precision/recall metrics documented. Notebook included.',
-        repo: '#'
-      },
-      p2: {
-        title: 'Sales Performance Dashboard',
-        sub: 'Power BI · Dashboards',
-        problem: 'Create interactive dashboard to monitor sales and KPIs.',
-        approach: 'Cleaned data, created measures in Power BI and built overview + region pages.',
-        results: 'Dashboard highlights top regions and monthly trends. PBIX and screenshots included.',
-        repo: '#'
-      },
-      p3: {
-        title: 'IPL Data Analysis',
-        sub: 'EDA · Pandas · Seaborn',
-        problem: 'Explore IPL data to find patterns related to wins and player performance.',
-        approach: 'Aggregate player & match stats, visualize trends and correlations.',
-        results: 'Visual insights and summary tables produced for future modeling.',
-        repo: '#'
-      }
+      p1: { title: 'Credit Card Default Prediction', sub: 'ML · Python · scikit-learn', problem: 'Predict customer default risk using transactional and demographic features.', approach: 'Data cleaning, feature engineering, baseline models and cross-validation. Tuned tree-based hyperparameters.', results: 'Balanced performance with precision/recall metrics documented. Notebook included.', repo: '#' },
+      p2: { title: 'Sales Performance Dashboard', sub: 'Power BI · Dashboards', problem: 'Create interactive dashboard to monitor sales and KPIs.', approach: 'Cleaned data, created measures in Power BI and built overview + region pages.', results: 'Dashboard highlights top regions and monthly trends. PBIX and screenshots included.', repo: '#' },
+      p3: { title: 'IPL Data Analysis', sub: 'EDA · Pandas · Seaborn', problem: 'Explore IPL data to find patterns related to wins and player performance.', approach: 'Aggregate player & match stats, visualize trends and correlations.', results: 'Visual insights and summary tables produced for future modeling.', repo: '#' }
     };
 
     // open modal
@@ -227,8 +215,6 @@
       overlay.setAttribute('aria-hidden','true');
     }
   </script>
+
 </body>
 </html>
-
-
-
