@@ -1,51 +1,92 @@
 :root{
-  --bg:#f7f8fb;
-  --card:#ffffff;
-  --accent:#0f62fe;
-  --text:#0b1220;
-  --muted:#57606a;
+  --bg: #f4fbf8;
+  --card: #ffffff;
+  --accent: #0b8f6b; /* green analytics accent */
+  --accent-2: #0b66a6; /* blue for contrast */
+  --text: #092028;
+  --muted: #4b6570;
+  --radius: 12px;
+  --glass: rgba(11,16,14,0.03);
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background:var(--bg);
   color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
 }
-.container{
-  max-width:1000px;
-  margin:0 auto;
-  padding:2rem 1rem;
-}
-.site-header{
-  background:linear-gradient(90deg, #ffffff, #f3f6ff);
-  border-bottom:1px solid rgba(16,24,40,.04);
-  padding:1.2rem 0;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-.site-header .container{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-.name{margin:0;font-size:1.4rem}
-.role{margin:0;color:var(--muted);font-size:.95rem}
-.top-nav{margin-left:auto}
-.top-nav a{margin-left:1rem;text-decoration:none;color:var(--accent);font-weight:600}
-.card{background:var(--card);padding:1.2rem;border-radius:10px;margin-top:1.2rem;box-shadow:0 6px 18px rgba(11,18,32,.04)}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem;margin-top:.6rem}
-.skill{padding:.6rem;border-radius:8px;border:1px solid rgba(11,18,32,.06);background:#fff;text-align:center;font-weight:600}
-.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:0.8rem}
-.project{padding:.9rem;border-radius:8px;border:1px solid rgba(11,18,32,.04);background:#fff}
-.project h3{margin-top:0;margin-bottom:.5rem}
-.btn{display:inline-block;padding:.45rem .6rem;border-radius:6px;text-decoration:none;border:1px solid var(--accent);color:var(--accent);font-weight:600}
-.note{font-size:.9rem;color:var(--muted);margin-top:.8rem}
-.muted{color:var(--muted);margin-bottom:0.6rem}
-.contact-list{list-style:none;padding-left:0;margin:0}
-.contact-list li{margin-bottom:.4rem}
-.footer{padding:1.2rem;text-align:center;color:var(--muted);font-size:.9rem;margin-top:1.2rem}
 
-/* responsive tweaks */
-@media (max-width:560px){
-  .top-nav{width:100%;order:3;margin-top:.6rem}
-  .site-header .container{flex-direction:column;align-items:flex-start}
+.container{max-width:980px;margin:0 auto;padding:2rem 1rem}
+.site-header{
+  position:sticky;top:0;z-index:20;
+  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+  border-bottom:1px solid rgba(11,16,14,0.05);
+  backdrop-filter: blur(4px);
+}
+.header-inner{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding:.9rem 0}
+.brand{display:flex;flex-direction:column}
+.name{margin:0;font-size:1.25rem;font-weight:700}
+.role{margin:0;color:var(--muted);font-size:.9rem}
+.top-nav{margin-left:auto;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.top-nav a{color:var(--accent-2);text-decoration:none;font-weight:600;padding:.3rem .5rem;border-radius:8px}
+.top-nav a:hover{background:rgba(11,102,166,0.06)}
+.btn{display:inline-block;padding:.45rem .7rem;border-radius:8px;text-decoration:none;border:1px solid var(--accent);color:var(--accent);font-weight:700;background:transparent}
+.btn.resume{background:var(--accent);color:#fff;border:0;padding:.5rem .7rem}
+.card{background:var(--card);padding:1.2rem;border-radius:var(--radius);margin-top:1.2rem;box-shadow:0 6px 18px rgba(11,16,14,0.04)}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 220px;gap:1rem;align-items:center}
+.hero-left h2{margin:0;font-size:1.4rem}
+.lead{color:var(--muted);margin-top:.6rem}
+.cta{display:inline-block;margin-top:.8rem;padding:.5rem .7rem;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+.muted-link{margin-left:.6rem;color:var(--muted);text-decoration:none}
+
+/* STATS */
+.stats{background:linear-gradient(180deg, rgba(11,143,107,0.06), rgba(11,102,166,0.02));padding:.7rem;border-radius:10px}
+.stats div{display:flex;flex-direction:column}
+.stats strong{font-weight:700}
+.stats span{font-size:.9rem;color:var(--muted);margin-top:.3rem}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem;margin-top:.6rem}
+.skill{padding:.6rem;border-radius:8px;border:1px solid rgba(11,16,14,0.04);background:linear-gradient(180deg,#fff,#fbfffd);text-align:center;font-weight:600}
+.tools{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+.tools span{background:var(--glass);padding:.4rem .6rem;border-radius:8px;font-size:.9rem;color:var(--muted)}
+
+/* Projects */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:0.8rem}
+.project{position:relative;padding:1rem;border-radius:10px;border:1px solid rgba(11,16,14,0.03);background:linear-gradient(180deg,#fff,#fbfffd)}
+.tag{position:absolute;right:12px;top:12px;background:var(--accent);color:#fff;padding:.25rem .5rem;border-radius:6px;font-weight:700;font-size:.8rem}
+.project h3{margin-top:0;margin-bottom:.4rem}
+.proj-meta{color:var(--muted);font-size:.9rem;margin-top:.5rem;display:flex;gap:.6rem}
+
+/* Contact & footer */
+.contact-list{list-style:none;padding:0;margin:0}
+.contact-list li{margin-bottom:.5rem}
+.footer{text-align:center;color:var(--muted);margin-top:1.2rem;padding-bottom:2rem}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(6,9,8,0.45);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal{max-width:720px;width:92%;background:var(--card);border-radius:14px;padding:1rem;box-shadow:0 20px 60px rgba(3,10,8,0.5);position:relative;margin:1rem}
+.modal-close{position:absolute;right:12px;top:8px;background:transparent;border:0;font-size:1.6rem;color:var(--muted);cursor:pointer}
+.modal-body h3{margin:0}
+.modal-body h4{margin-top:1rem;margin-bottom:.4rem}
+.modal-links a{color:var(--accent-2);font-weight:700}
+
+/* Responsive */
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:1rem}
+  .top-nav{width:100%;justify-content:flex-start}
+  .header-inner{gap:.5rem}
+}
+
+/* small screens */
+@media (max-width:480px){
+  .container{padding:1rem}
+  .name{font-size:1.05rem}
+  .role{font-size:.85rem}
 }
