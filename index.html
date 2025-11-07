@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sreeraj S — Data Science & ML Enthusiast</title>
-  <meta name="description" content="Sreeraj S | Data Science & ML Enthusiast. Projects: ML, EDA, Dashboards.">
+  <title>Sreeraj S — Aspiring Data Science & Machine Learning Enthusiast</title>
+  <meta name="description" content="Sreeraj S | Aspiring Data Science & Machine Learning Enthusiast. Projects: ML, EDA, Dashboards.">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,42 +13,49 @@
     <div class="container header-inner">
       <div class="brand">
         <h1 class="name">Sreeraj S</h1>
-        <p class="role">Data Science &amp; ML Enthusiast</p>
+        <p class="role">Aspiring Data Science &amp; Machine Learning Enthusiast</p>
       </div>
+
       <nav class="top-nav">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a class="btn resume" href="resume.pdf" download>Download Resume</a>
+        <a class="btn resume" href="resume.pdf" download>Resume</a>
+        <a class="social" href="https://github.com/sreeraj-10" target="_blank" aria-label="GitHub">GH</a>
+        <a class="social" href="https://www.linkedin.com/in/sreeraj10" target="_blank" aria-label="LinkedIn">IN</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <!-- HERO -->
-    <section id="hero" class="hero card">
+    <section id="hero" class="hero card reveal">
       <div class="hero-left">
-        <h2>Hello — I'm Sreeraj</h2>
+        <h2 class="headline">Hi — I'm <span class="accent">Sreeraj</span></h2>
         <p class="lead">A mathematics graduate with a strong analytical mindset, upskilling in Data Science & Machine Learning. I turn data into insights using Python, Power BI and Excel.</p>
-        <p><a class="cta" href="#projects">See my projects</a> <a class="muted-link" href="#contact">Contact me</a></p>
+        <p class="hero-cta">
+          <a class="cta" href="#projects">See Projects</a>
+          <a class="muted-link" href="#contact">Contact</a>
+        </p>
       </div>
+
       <div class="hero-right">
-        <div class="stats">
-          <div><strong>Skills</strong><span>Python · SQL · Power BI</span></div>
-          <div><strong>Projects</strong><span>3 sample case studies</span></div>
+        <div class="stat-card">
+          <div class="stat"><strong>Skills</strong><span>Python · SQL · Power BI</span></div>
+          <div class="stat"><strong>Projects</strong><span>3 sample case studies</span></div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="card">
+    <section id="about" class="card reveal">
       <h2>About</h2>
       <p>I am a mathematics graduate with a strong analytical mindset and a growing passion for data science. Currently upskilling in data science and machine learning, I enjoy turning data into meaningful insights that support smarter decisions. With a solid foundation in statistics and problem-solving, I am eager to apply my skills to real-world challenges and grow as an aspiring data scientist. I'm particularly interested in data analysis, predictive modeling, and visualization using tools like Python, Power BI, and Excel.</p>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="card">
+    <section id="skills" class="card reveal">
       <h2>Skills</h2>
       <div class="skills-grid">
         <div class="skill">Python</div>
@@ -72,48 +79,48 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="card">
+    <section id="projects" class="card reveal">
       <h2>Projects</h2>
-      <p class="muted">Click any project to open a short case study (Problem → Approach → Results).</p>
+      <p class="muted">Click any card to open the case study.</p>
 
       <div class="project-grid">
         <!-- Project 1 -->
-        <article class="project" data-proj="p1">
+        <article class="project" data-proj="p1" tabindex="0">
           <div class="tag">ML</div>
-          <h3>Iris Classification</h3>
-          <p>Classic beginner classification: data cleaning, model training, evaluation and visualization.</p>
+          <h3>Credit Card Default Prediction</h3>
+          <p>Classification model to predict customer default risk using Python and scikit-learn. Preprocessing, feature selection, evaluation.</p>
           <div class="proj-meta"><span>Python</span><span>scikit-learn</span></div>
           <p><button class="btn open-project" data-target="p1">View case study</button></p>
         </article>
 
         <!-- Project 2 -->
-        <article class="project" data-proj="p2">
-          <div class="tag">ML</div>
-          <h3>Titanic Survival Prediction</h3>
-          <p>EDA, feature engineering, baseline and improved models with comparison and accuracy metrics.</p>
-          <div class="proj-meta"><span>Pandas</span><span>Feature Engg</span></div>
+        <article class="project" data-proj="p2" tabindex="0">
+          <div class="tag">Dashboard</div>
+          <h3>Sales Performance Dashboard</h3>
+          <p>Interactive Power BI dashboard analyzing sales trends, profit, and regional performance with KPIs.</p>
+          <div class="proj-meta"><span>Power BI</span><span>Excel</span></div>
           <p><button class="btn open-project" data-target="p2">View case study</button></p>
         </article>
 
         <!-- Project 3 -->
-        <article class="project" data-proj="p3">
-          <div class="tag">Dashboard</div>
-          <h3>Sales Dashboard (Power BI)</h3>
-          <p>Interactive dashboard showing KPIs, regional sales, time series trends and top products.</p>
-          <div class="proj-meta"><span>Power BI</span><span>Excel</span></div>
+        <article class="project" data-proj="p3" tabindex="0">
+          <div class="tag">EDA</div>
+          <h3>IPL Data Analysis</h3>
+          <p>EDA on IPL match data to uncover trends and insights using Pandas & Seaborn.</p>
+          <div class="proj-meta"><span>Pandas</span><span>Seaborn</span></div>
           <p><button class="btn open-project" data-target="p3">View case study</button></p>
         </article>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="card">
+    <section id="contact" class="card reveal">
       <h2>Contact</h2>
-      <p>If you’d like to collaborate, see full notebooks, or request my resume, reach out:</p>
+      <p>If you’d like to collaborate, see notebooks, or request my resume, reach out:</p>
       <ul class="contact-list">
-        <li>Email: <a id="email-link" href="mailto:youremail@example.com">youremail@example.com</a></li>
-        <li>GitHub: <a id="github-link" href="https://github.com/username" target="_blank">github.com/username</a></li>
-        <li>LinkedIn: <a id="linkedin-link" href="#" target="_blank">linkedin.com/in/yourprofile</a></li>
+        <li>Email: <a id="email-link" href="mailto:sreeraj@gmail.com">sreeraj@gmail.com</a></li>
+        <li>GitHub: <a id="github-link" href="https://github.com/sreeraj-10" target="_blank">github.com/sreeraj-10</a></li>
+        <li>LinkedIn: <a id="linkedin-link" href="https://www.linkedin.com/in/sreeraj10" target="_blank">linkedin.com/in/sreeraj10</a></li>
       </ul>
     </section>
 
@@ -122,7 +129,7 @@
     </footer>
   </main>
 
-  <!-- PROJECT MODALS (hidden) -->
+  <!-- MODAL -->
   <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button class="modal-close" aria-label="Close modal">&times;</button>
@@ -141,7 +148,7 @@
   </div>
 
   <script>
-    // Basic smooth nav
+    // Smooth nav
     document.querySelectorAll('.top-nav a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         e.preventDefault();
@@ -149,34 +156,48 @@
       });
     });
 
-    // Project modal content (replace or extend later)
+    // IntersectionObserver for reveal animations
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          // once visible, unobserve for performance
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    reveals.forEach(r=>obs.observe(r));
+
+    // Project modal content (same sample projects)
     const projects = {
       p1: {
-        title: 'Iris Classification',
+        title: 'Credit Card Default Prediction',
         sub: 'ML · Python · scikit-learn',
-        problem: 'Predict iris species from measured features. Learn model pipeline basics and visualization.',
-        approach: 'Load data with pandas, visualize distributions, train a baseline logistic regression and a small decision tree. Cross-validate and tune hyperparameters.',
-        results: 'Achieved ~96% accuracy with a small ensemble. Included confusion matrix and feature importance plots. Notebook included.',
+        problem: 'Predict customer default risk using transactional and demographic features.',
+        approach: 'Data cleaning, feature engineering, baseline models and cross-validation. Tuned tree-based hyperparameters.',
+        results: 'Balanced performance with precision/recall metrics documented. Notebook included.',
         repo: '#'
       },
       p2: {
-        title: 'Titanic Survival Prediction',
-        sub: 'ML · Feature engineering · Pandas',
-        problem: 'Predict passenger survival on Titanic using demographic and ticket features.',
-        approach: 'Exploratory Data Analysis, handle missing values, create new features (title, family size), compare multiple models and evaluate with accuracy and ROC-AUC.',
-        results: 'Improved baseline model through feature engineering. Notebook documents decisions and comparisons.',
+        title: 'Sales Performance Dashboard',
+        sub: 'Power BI · Dashboards',
+        problem: 'Create interactive dashboard to monitor sales and KPIs.',
+        approach: 'Cleaned data, created measures in Power BI and built overview + region pages.',
+        results: 'Dashboard highlights top regions and monthly trends. PBIX and screenshots included.',
         repo: '#'
       },
       p3: {
-        title: 'Sales Dashboard (Power BI)',
-        sub: 'Power BI · Dashboards · Business Insights',
-        problem: 'Provide business stakeholders with an interactive dashboard to explore sales trends and KPIs.',
-        approach: 'Clean sales data in Excel, create measures in Power BI, design pages for overview, region, product, and time-series analysis.',
-        results: 'Dashboard highlights top regions, monthly trends, and actionable insights for sales strategy. PBIX file and screenshots included.',
+        title: 'IPL Data Analysis',
+        sub: 'EDA · Pandas · Seaborn',
+        problem: 'Explore IPL data to find patterns related to wins and player performance.',
+        approach: 'Aggregate player & match stats, visualize trends and correlations.',
+        results: 'Visual insights and summary tables produced for future modeling.',
         repo: '#'
       }
     };
 
+    // open modal
     const overlay = document.getElementById('modal-overlay');
     const modalTitle = document.getElementById('modal-title');
     const modalSub = document.querySelector('.modal-sub');
@@ -197,25 +218,18 @@
         modalRepo.href = p.repo;
         overlay.classList.add('open');
         overlay.setAttribute('aria-hidden','false');
-        // trap focus simple:
         document.querySelector('.modal-close').focus();
       });
     });
 
+    // close modal
     document.querySelector('.modal-close').addEventListener('click', closeModal);
-    overlay.addEventListener('click', (e)=>{
-      if(e.target === overlay) closeModal();
-    });
-    window.addEventListener('keydown', (e)=>{
-      if(e.key === 'Escape') closeModal();
-    });
-
+    overlay.addEventListener('click', (e)=>{ if(e.target===overlay) closeModal(); });
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
     function closeModal(){
       overlay.classList.remove('open');
       overlay.setAttribute('aria-hidden','true');
     }
-
-    // Small accessibility: focus trap would be nicer but this is simple for beginners.
   </script>
 </body>
 </html>
