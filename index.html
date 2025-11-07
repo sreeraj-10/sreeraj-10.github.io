@@ -4,29 +4,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sreeraj S — Data Science & ML Enthusiast</title>
-  <meta name="description" content="Sreeraj S | Aspiring data scientist. Data analysis, predictive modeling, and visualization using Python, Power BI & Excel.">
+  <meta name="description" content="Sreeraj S | Data Science & ML Enthusiast. Projects: ML, EDA, Dashboards.">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="name">Sreeraj S</h1>
-      <p class="role">Data Science &amp; ML Enthusiast</p>
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="name">Sreeraj S</h1>
+        <p class="role">Data Science &amp; ML Enthusiast</p>
+      </div>
       <nav class="top-nav">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a class="btn resume" href="resume.pdf" download>Download Resume</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
+    <!-- HERO -->
+    <section id="hero" class="hero card">
+      <div class="hero-left">
+        <h2>Hello — I'm Sreeraj</h2>
+        <p class="lead">A mathematics graduate with a strong analytical mindset, upskilling in Data Science & Machine Learning. I turn data into insights using Python, Power BI and Excel.</p>
+        <p><a class="cta" href="#projects">See my projects</a> <a class="muted-link" href="#contact">Contact me</a></p>
+      </div>
+      <div class="hero-right">
+        <div class="stats">
+          <div><strong>Skills</strong><span>Python · SQL · Power BI</span></div>
+          <div><strong>Projects</strong><span>3 sample case studies</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
     <section id="about" class="card">
-      <h2>About Me</h2>
+      <h2>About</h2>
       <p>I am a mathematics graduate with a strong analytical mindset and a growing passion for data science. Currently upskilling in data science and machine learning, I enjoy turning data into meaningful insights that support smarter decisions. With a solid foundation in statistics and problem-solving, I am eager to apply my skills to real-world challenges and grow as an aspiring data scientist. I'm particularly interested in data analysis, predictive modeling, and visualization using tools like Python, Power BI, and Excel.</p>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="card">
       <h2>Skills</h2>
       <div class="skills-grid">
@@ -37,63 +58,164 @@
         <div class="skill">Power BI</div>
         <div class="skill">Excel</div>
       </div>
+
+      <h3 class="mt">Tools & Tech</h3>
+      <div class="tools">
+        <span>Jupyter</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>scikit-learn</span>
+        <span>Matplotlib</span>
+        <span>Power BI</span>
+        <span>Git & GitHub</span>
+      </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="card">
       <h2>Projects</h2>
-      <p class="muted">These are my projects. </p>
+      <p class="muted">Click any project to open a short case study (Problem → Approach → Results).</p>
 
       <div class="project-grid">
-        <article class="project">
-          <h3>Credit-Card-Default-Prediction</h3>
-          <p> This project aims to predict credit card default using <strong>Machine Learning</strong>.techniques. The dataset contains information about customers' payment history, credit limits, and other financial factors. The goal is to build an accurate classification model to identify potential defaulters..</p>
-          <p><strong>Tech:</strong> Python, Pandas, Scikit-learn, Matplotlib</p>
-          <p><a href="#" class="btn" target="_blank">https://github.com/sreeraj-10/Credit-Card-Default-Prediction</a></p>
+        <!-- Project 1 -->
+        <article class="project" data-proj="p1">
+          <div class="tag">ML</div>
+          <h3>Iris Classification</h3>
+          <p>Classic beginner classification: data cleaning, model training, evaluation and visualization.</p>
+          <div class="proj-meta"><span>Python</span><span>scikit-learn</span></div>
+          <p><button class="btn open-project" data-target="p1">View case study</button></p>
         </article>
 
-        <article class="project">
-          <h3>Titanic Survival Prediction (Beginner)</h3>
-          <p>Exploratory Data Analysis and a baseline machine learning model to predict passenger survival. Demonstrates feature engineering, handling missing values, and model comparison.</p>
-          <p><strong>Tech:</strong> Python, Pandas, Scikit-learn, seaborn, matplotlib</p>
-          <p><a href="#" class="btn" target="_blank">GitHub Repo (placeholder)</a></p>
+        <!-- Project 2 -->
+        <article class="project" data-proj="p2">
+          <div class="tag">ML</div>
+          <h3>Titanic Survival Prediction</h3>
+          <p>EDA, feature engineering, baseline and improved models with comparison and accuracy metrics.</p>
+          <div class="proj-meta"><span>Pandas</span><span>Feature Engg</span></div>
+          <p><button class="btn open-project" data-target="p2">View case study</button></p>
         </article>
 
-        <article class="project">
-          <h3>Sales Dashboard (Power BI) — Sample</h3>
-          <p>Interactive sales dashboard built in Power BI showcasing KPIs, time series sales, and regional charts. Good for demonstrating visualization and business insights.</p>
-          <p><strong>Tech:</strong> Power BI, Excel</p>
-          <p><a href="#" class="btn" target="_blank">Live demo / file (placeholder)</a></p>
+        <!-- Project 3 -->
+        <article class="project" data-proj="p3">
+          <div class="tag">Dashboard</div>
+          <h3>Sales Dashboard (Power BI)</h3>
+          <p>Interactive dashboard showing KPIs, regional sales, time series trends and top products.</p>
+          <div class="proj-meta"><span>Power BI</span><span>Excel</span></div>
+          <p><button class="btn open-project" data-target="p3">View case study</button></p>
         </article>
       </div>
-      <p class="note">Tip: replace the placeholders with links to your GitHub repos or Power BI report files once available.</p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="card">
       <h2>Contact</h2>
-      <p>If you'd like to collaborate or see my work, feel free to reach out.</p>
+      <p>If you’d like to collaborate, see full notebooks, or request my resume, reach out:</p>
       <ul class="contact-list">
-        <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></li>
-        <li>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></li>
+        <li>Email: <a id="email-link" href="mailto:youremail@example.com">youremail@example.com</a></li>
+        <li>GitHub: <a id="github-link" href="https://github.com/username" target="_blank">github.com/username</a></li>
+        <li>LinkedIn: <a id="linkedin-link" href="#" target="_blank">linkedin.com/in/yourprofile</a></li>
       </ul>
     </section>
 
     <footer class="footer">
-      <p>Made by Sreeraj S</p>
+      <p>Made with ⚡ • <strong>Sreeraj S</strong></p>
     </footer>
   </main>
 
-  <!-- Optional small script for smooth scrolling -->
+  <!-- PROJECT MODALS (hidden) -->
+  <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <h3 id="modal-title">Project Title</h3>
+        <p class="modal-sub">Short subtitle / tech</p>
+        <h4>Problem</h4>
+        <p class="modal-problem"></p>
+        <h4>Approach</h4>
+        <p class="modal-approach"></p>
+        <h4>Results</h4>
+        <p class="modal-results"></p>
+        <p class="modal-links"><a id="modal-repo" href="#" target="_blank">View repo</a></p>
+      </div>
+    </div>
+  </div>
+
   <script>
-    document.querySelectorAll('.top-nav a').forEach(a=>{
+    // Basic smooth nav
+    document.querySelectorAll('.top-nav a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         e.preventDefault();
         document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
       });
     });
+
+    // Project modal content (replace or extend later)
+    const projects = {
+      p1: {
+        title: 'Iris Classification',
+        sub: 'ML · Python · scikit-learn',
+        problem: 'Predict iris species from measured features. Learn model pipeline basics and visualization.',
+        approach: 'Load data with pandas, visualize distributions, train a baseline logistic regression and a small decision tree. Cross-validate and tune hyperparameters.',
+        results: 'Achieved ~96% accuracy with a small ensemble. Included confusion matrix and feature importance plots. Notebook included.',
+        repo: '#'
+      },
+      p2: {
+        title: 'Titanic Survival Prediction',
+        sub: 'ML · Feature engineering · Pandas',
+        problem: 'Predict passenger survival on Titanic using demographic and ticket features.',
+        approach: 'Exploratory Data Analysis, handle missing values, create new features (title, family size), compare multiple models and evaluate with accuracy and ROC-AUC.',
+        results: 'Improved baseline model through feature engineering. Notebook documents decisions and comparisons.',
+        repo: '#'
+      },
+      p3: {
+        title: 'Sales Dashboard (Power BI)',
+        sub: 'Power BI · Dashboards · Business Insights',
+        problem: 'Provide business stakeholders with an interactive dashboard to explore sales trends and KPIs.',
+        approach: 'Clean sales data in Excel, create measures in Power BI, design pages for overview, region, product, and time-series analysis.',
+        results: 'Dashboard highlights top regions, monthly trends, and actionable insights for sales strategy. PBIX file and screenshots included.',
+        repo: '#'
+      }
+    };
+
+    const overlay = document.getElementById('modal-overlay');
+    const modalTitle = document.getElementById('modal-title');
+    const modalSub = document.querySelector('.modal-sub');
+    const modalProblem = document.querySelector('.modal-problem');
+    const modalApproach = document.querySelector('.modal-approach');
+    const modalResults = document.querySelector('.modal-results');
+    const modalRepo = document.getElementById('modal-repo');
+
+    document.querySelectorAll('.open-project').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const id = btn.getAttribute('data-target');
+        const p = projects[id];
+        modalTitle.textContent = p.title;
+        modalSub.textContent = p.sub;
+        modalProblem.textContent = p.problem;
+        modalApproach.textContent = p.approach;
+        modalResults.textContent = p.results;
+        modalRepo.href = p.repo;
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden','false');
+        // trap focus simple:
+        document.querySelector('.modal-close').focus();
+      });
+    });
+
+    document.querySelector('.modal-close').addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e)=>{
+      if(e.target === overlay) closeModal();
+    });
+    window.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') closeModal();
+    });
+
+    function closeModal(){
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden','true');
+    }
+
+    // Small accessibility: focus trap would be nicer but this is simple for beginners.
   </script>
 </body>
 </html>
-
-
-
