@@ -104,3 +104,51 @@ body{
   .name{font-size:1.05rem}
   .role{font-size:.85rem}
 }
+
+/* Skills and Tools Icons Styling */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(11,16,14,0.04);
+  background: linear-gradient(180deg,#fff,#fbfffd);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.skill i {
+  font-size: 16px;
+  color: var(--accent);
+}
+
+.tools-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tools-icons span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  background: var(--glass);
+  color: var(--muted);
+}
+
+.tools-icons i {
+  font-size: 15px;
+  color: var(--accent);
+}
